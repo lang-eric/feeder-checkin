@@ -8,7 +8,7 @@ const db = new JSONdb('database.json');
 
 /* GET admin page. */
 router.get('/admin', function (req, res, next) {
-    res.render('index', {
+    res.render('admin', {
         title: 'RIT Cats - Feeder Check-In.', feeders: db.get('feeders')
     });
 });

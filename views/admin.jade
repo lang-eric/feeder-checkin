@@ -1,11 +1,15 @@
 extends layout
 
-block content
-    h1= title
-    
-    label(for='feeders') Who would you like to delete?: 
-    select#feeders(name='feeders')
-        for feeder in feeders
-            option(value=feeder) #{feeder}
-    br
-    button.checkin Delete
+html
+  head
+    script(src='/jquery/jquery.js')
+  body
+    block content
+        h1= title
+        
+        label(for='feeders') Who would you like to delete?: 
+        select#feeders(name='feeders')
+            for feeder in feeders
+                option(value=feeder) #{feeder}
+        br
+        button.delete Delete
