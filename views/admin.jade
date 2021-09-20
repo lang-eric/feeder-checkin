@@ -2,11 +2,11 @@ extends layout
 
 html
   head
-    script(src='/jquery/jquery.js')
-    script(src='/javascripts/admin.js')
-
   body
     block content
+
+        script(type="text/javascript" src='/jquery/jquery.js')
+        script(type="text/javascript" src='/javascripts/admin.js')
         h1= title
         
         label(for='feeders') Who would you like to delete?: 
@@ -14,4 +14,4 @@ html
             for feeder in feeders
                 option(value=feeder) #{feeder}
         br
-        button.delete Delete
+        button#delete Delete

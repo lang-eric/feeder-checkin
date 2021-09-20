@@ -1,6 +1,8 @@
-<script src="/jquery/jquery.js"></script>
+jQuery(function(){
+    var deleteFeeder = function () {
+        console.log('Send request to backend to delete a feeder.');
+    }
 
-$('#delete').click(function(){
-    console.log("HELLO!");
-
+    $('#delete').on('click', deleteFeeder)
 });
+
