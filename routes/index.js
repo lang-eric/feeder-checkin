@@ -6,7 +6,7 @@ const db = new JSONdb('database.json');
 
 
 /* GET home page. */
-router.get('/po', function (req, res, next) {
+router.get('/', function (req, res, next) {
     res.render('index', {
         title: 'RIT Cats - Feeder Check-In.', feeders: db.get('feeders')
     });
