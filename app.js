@@ -18,6 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use('/admin.js', express.static(__dirname + 'Javascripts/admin.js'));
 
 app.use(adminRouter);
 app.use(indexRouter);
