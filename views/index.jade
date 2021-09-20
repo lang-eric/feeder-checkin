@@ -1,8 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  button.btn.btn-success(type='submit')
-   i.fa.fa-check
-   | Check In
+    h1= title
+    p Welcome to #{title}
+
+    label(for='feeders') Who are you?: 
+    select#feeders(name='feeders')
+        for feeder in feeders
+            option(value=feeder) #{feeder}
+    br
+    button.checkin Check In
