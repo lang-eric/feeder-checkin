@@ -3,6 +3,8 @@ a {
 }
 
 button {
+    height: 8vh;
+    width: 40%;
     border: black;
     background-color: orange;
     padding: 14px 28px;
@@ -24,33 +26,33 @@ body {
 
 .row {
     display: flex;
-    flex-direction: row;
-    padding: 2vw;
-    align-items: flex-end;
 }
 
 .column {
+    margin-left: 2vw;
     display: flex;
     flex-direction: column;
-    padding: 2vw;
+    width: 28vw;
 }
 
-.row::after {
-    content: "";
-    flex: auto;
+#factcolumn {
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
 }
 
 .right-column {
     display: flex;
-    flex-direction: column;
-    padding: 2vw;
     align-items: flex-end;
-    justify-items: flex-start;
+    justify-content: center;
+    width: 14vw;
 }
 
 label {
-    font-size: 2.5vw;
-    width: 50%;
+    font-size: 3vh;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
 }
 
 input,
@@ -58,7 +60,6 @@ select {
     height: 8vh;
     box-sizing: border-box;
     font-size: 5vh;
-    width: 30vw;
     border: 2px solid red;
 }
 

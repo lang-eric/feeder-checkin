@@ -4,10 +4,11 @@ var router = express.Router();
 // TODO DRY.
 
 /* GET admin page. */
-router.get('/admin', function (req, res, next) {
+router.get('/admin', function(req, res, next) {
     let db = req.app.locals.db;
     res.render('admin', {
-        title: 'RIT Cats - Feeder Check-In.', feeders: db.get('feeders')
+        title: 'RIT Cats - Feeder Check-In.',
+        feeders: db.get('feeders')
     });
 });
 
@@ -15,7 +16,7 @@ router.get('/admin', function (req, res, next) {
     Currently delete button presss is sent as a POST to the /admin endpoint...
 */
 
-router.post('/admin', function (req, res, next) {
+router.post('/admin', function(req, res, next) {
     let feederToDelete = req.body.feederToDelete
     console.log(`deleting feeder: ${feederToDelete} from json database.`);
     let db = req.app.locals.db;
@@ -30,7 +31,8 @@ router.post('/admin', function (req, res, next) {
         feedersArray.splice(feederToDeleteIndex, 1);
 
         db.set('feeders', feedersArray);
-        res.status(202).json({ message: 'Feeder removed from JSON database..' });
+        res.redirect(307, '/bla');
+
     }
 
 });
