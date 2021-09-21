@@ -9,9 +9,14 @@ html
         script(type="text/javascript" src='/javascripts/admin.js')
         h1= title
         
-        label(for='feeders') Who would you like to delete?: 
-        select#feeders(name='feeders')
+        label(for='feedersDropdown') Who would you like to delete?: 
+        select#feedersDropdown
             for feeder in feeders
                 option(value=feeder) #{feeder}
-        br
         button#delete Delete
+        br
+        label(for='feedersDropdown') Who would you like to add?: 
+        input#feederToAdd(type='text' name='')
+        button#delete Add
+
+        p#status Status: 

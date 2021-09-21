@@ -1,3 +1,11 @@
 {
-    "feeders":["Eric L", "Emily L", "Lily G"]
+    "feeders": [
+        "Lily G",
+        "Eric L",
+        "Jim"
+    ],
+    "feedingDays": {
+        "monday": "Eric L",
+        "tuesday": "Jim"
+    }
 }

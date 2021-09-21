@@ -9,6 +9,11 @@ var adminRouter = require('./routes/admin');
 
 var app = express();
 
+const JSONdb = require('simple-json-db');
+
+const db = new JSONdb('database.json');
+app.locals.db = db;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
