@@ -11,6 +11,7 @@ button {
     color: black;
     cursor: pointer;
     text-align: center;
+    border: 2px solid red;
 }
 
 html,
@@ -24,16 +25,14 @@ body {
 .row {
     display: flex;
     flex-direction: row;
-    padding: 1%;
-    gap: 10px 20px;
+    padding: 2vw;
     align-items: flex-end;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    padding: 1%;
-    gap: 10px 40px;
+    padding: 2vw;
 }
 
 .row::after {
@@ -44,13 +43,14 @@ body {
 .right-column {
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 2vw;
     align-items: flex-end;
     justify-items: flex-start;
 }
 
 label {
     font-size: 2.5vw;
+    width: 50%;
 }
 
 input,
@@ -59,6 +59,7 @@ select {
     box-sizing: border-box;
     font-size: 5vh;
     width: 30vw;
+    border: 2px solid red;
 }
 
 h1 {

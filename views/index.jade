@@ -1,10 +1,13 @@
 extends layout
 
 block content
+    script(type="text/javascript" src='/jquery/jquery.js')
+    script(type="text/javascript" src='/javascripts/index.js')
     h1= title
-    label(for='feeders') Who are you?: 
-    select#feeders(name='feeders')
+
+    label(for='feedersDropdown') Who are you?: 
+    select#feedersDropdown
         for feeder in feeders
             option(value=feeder) #{feeder}
     br
-    button.checkin Check In
+    button#checkIn Check In
