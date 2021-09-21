@@ -1,22 +1,29 @@
 extends layout
 
-html
-  head
-  body
-    block content
-
+block content
+    html
         script(type="text/javascript" src='/jquery/jquery.js')
         script(type="text/javascript" src='/javascripts/admin.js')
-        h1= title
-        
-        label(for='feedersDropdown') Who would you like to delete?: 
-        select#feedersDropdown
-            for feeder in feeders
-                option(value=feeder) #{feeder}
-        button#delete Delete
-        br
-        label(for='feedersDropdown') Who would you like to add?: 
-        input#feederToAdd(type='text' name='')
-        button#delete Add
+        head
+        body
+            h1= title
+            div.row
+                div.column
+                    label(for='feedersDropdown') Who would you like to delete?: 
+                    select#feedersDropdown
+                        for feeder in feeders
+                            option(value=feeder) #{feeder}
+                div.right-column
+                    button#delete Delete
+            div.row
+                div.column
+                    label(for='feederToAdd') Who would you like to add?: 
+                    input#feederToAdd(type='text' name='')
+                div.right-column
+                    button#addButton Add
 
-        p#status Status: 
+            div.row
+                p#status
+            div.row
+                button#factButton Cat Facts 
+                p#fact

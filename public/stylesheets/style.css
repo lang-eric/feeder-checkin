@@ -1,20 +1,69 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 button {
-    background-color: orange; /* Green */
-    border: none;
-    color: white;
-    padding: 7px 20px;
-    margin-left: auto;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    border: black;
+    background-color: orange;
+    padding: 14px 28px;
     font-size: 16px;
-  }
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+    gap: 10px 20px;
+    align-items: flex-end;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 10px 40px;
+}
+
+.row::after {
+    content: "";
+    flex: auto;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    align-items: flex-end;
+    justify-items: flex-start;
+}
+
+label {
+    font-size: 2.5vw;
+}
+
+input,
+select {
+    height: 8vh;
+    box-sizing: border-box;
+    font-size: 5vh;
+    width: 30vw;
+}
+
+h1 {
+    font: 40px Tahoma, Helvetica, Arial, Sans-Serif;
+    text-align: left;
+    color: #222;
+    text-shadow: 0px 2px 3px #555;
+}
