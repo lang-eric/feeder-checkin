@@ -4,7 +4,7 @@ a {
 
 button {
     height: 8vh;
-    width: 40%;
+    width: 60%;
     border: black;
     background-color: orange;
     padding: 14px 28px;
@@ -13,7 +13,7 @@ button {
     color: black;
     cursor: pointer;
     text-align: center;
-    border: 2px solid red;
+    border: 2px solid green;
 }
 
 html,
@@ -50,17 +50,22 @@ body {
 }
 
 label {
+    font: Tahoma;
+    text-shadow: 0px 2px 3px #555;
     font-size: 3vh;
     padding-top: 2vh;
     padding-bottom: 1vh;
 }
 
-input,
-select {
+select,
+input {
     height: 8vh;
     box-sizing: border-box;
     font-size: 5vh;
     border: 2px solid red;
+    font: Tahoma;
+    text-shadow: 0px 2px 3px #555;
+    color: #222;
 }
 
 h1 {
@@ -68,4 +73,5 @@ h1 {
     text-align: left;
     color: #222;
     text-shadow: 0px 2px 3px #555;
+    border: 5px dashed hotpink;
 }

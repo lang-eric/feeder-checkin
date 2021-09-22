@@ -11,11 +11,12 @@ jQuery(function() {
         // We could do the request to send the message in the browser (here), but..
         // this would let users of this application grab our private token for communicating to 
         // Discord's API.
-
+        console.log('sending checkin data to server');
         $.post('/', // url
-            { message: msg }, // data to be submit
+            { bloob: msg }, // data to be submit
             function(data, status, jqXHR) { // success callback
-                $('#status').append(status + 'data: ' + data.message);
+                console.log(data);
+                console.log('successfully received response from server.')
             });
     };
 
